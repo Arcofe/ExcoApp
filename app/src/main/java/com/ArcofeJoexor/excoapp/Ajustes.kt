@@ -1,11 +1,11 @@
 package com.ArcofeJoexor.excoapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
-class TriarTema: AppCompatActivity() {
+class Ajustes: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tema)
+        setContentView(R.layout.ajustes)
     }
 }
