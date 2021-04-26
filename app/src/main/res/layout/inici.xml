@@ -23,7 +23,6 @@
         android:id="@+id/usuario"
         android:layout_width="184dp"
         android:layout_height="43dp"
-        android:background="@color/primary"
         android:gravity="center_horizontal"
         android:text="usuario"
         android:textAlignment="center"
@@ -74,8 +73,8 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="83dp"
-        android:layout_height="49dp"
+        android:layout_width="199dp"
+        android:layout_height="65dp"
         android:text="JUGAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,8 +85,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="199dp"
+        android:layout_height="65dp"
         android:text="Ranking"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
