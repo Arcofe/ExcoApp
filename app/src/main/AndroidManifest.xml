@@ -12,6 +12,7 @@
         <activity android:name=".Inici"/>
         <activity android:name=".TriarTema"/>
         <activity android:name=".Ajustes"/>
+        <activity android:name=".Registre"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
