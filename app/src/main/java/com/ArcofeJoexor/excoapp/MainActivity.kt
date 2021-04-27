@@ -15,13 +15,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //declaracion botones
-        btnRegistro = findViewById<Button>(R.id.btnregistro)
+        btnRegistro = findViewById<Button>(R.id.btnRegistro)
         btnRegistro!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
-            R.id.btnregistro -> {
+            R.id.btnRegistro -> {
                 val intent = Intent(this, Registre::class.java)
                 startActivity(intent)
             }
