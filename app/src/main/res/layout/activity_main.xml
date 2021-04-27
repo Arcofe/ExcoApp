@@ -8,7 +8,7 @@
     android:background="@color/Primary">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogIn"
         android:layout_width="93dp"
         android:layout_height="45dp"
         android:text="Log In"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.635" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnGoogle"
         android:layout_width="107dp"
         android:layout_height="44dp"
         android:text="Google"
@@ -58,11 +58,11 @@
         app:layout_constraintVertical_bias="0.786" />
 
     <EditText
-        android:id="@+id/editTextNumberPassword"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberPassword"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="0.526" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
