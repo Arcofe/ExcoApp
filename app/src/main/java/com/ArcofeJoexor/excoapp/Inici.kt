@@ -23,6 +23,7 @@ class Inici: AppCompatActivity(), View.OnClickListener {
             setContentView(R.layout.inici)
 
             btnAjustes = findViewById<ImageButton>(R.id.ajustesInici)
+            btnAjustes!!.setOnClickListener(this)
 
             /**
              * Part on canviem dinamicament un TextView
@@ -37,6 +38,7 @@ class Inici: AppCompatActivity(), View.OnClickListener {
         when(v?.id){
             R.id.ajustesInici -> {
                 val intent = Intent(this, Ajustes::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }
         }
