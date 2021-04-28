@@ -72,7 +72,7 @@
         app:srcCompat="@drawable/usuario" />
 
     <Button
-        android:id="@+id/btnregistro"
+        android:id="@+id/btnregistre"
         android:layout_width="199dp"
         android:layout_height="65dp"
         android:text="REGISTRARSE"

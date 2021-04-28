@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 class Registre: AppCompatActivity(), View.OnClickListener {
 
     private var btnRegistre: Button? = null
+    private var btnVolverInicio: Button? = null
     private var user: EditText? = null
     private var password: EditText? = null
 
@@ -20,8 +21,10 @@ class Registre: AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registre)
         //declaracion botones
-        var btnVolverInicio = findViewById<Button>(R.id.btnBackLogIn)
-        btnVolverInicio.setOnClickListener(this)
+        btnVolverInicio = findViewById<Button>(R.id.btnBackLogIn)
+        btnRegistre = findViewById<Button>(R.id.btnregistre)
+        btnVolverInicio!!.setOnClickListener(this)
+        btnRegistre!!.setOnClickListener(this)
 
         // Analytics Event
         val analytics = FirebaseAnalytics.getInstance(this)
@@ -33,11 +36,19 @@ class Registre: AppCompatActivity(), View.OnClickListener {
         setup()
     }
 
+    private fun setDataFromTexBox()
+    {
+        user = findViewById(R.id.editTextTextEmailAddress)
+        password = findViewById(R.id.editTextNumberPassword)
+    }
+
     private fun setup() {
+        title = "Autenticació"
         /**
          * Part per fer el Registre d'un usuari
          */
         btnRegistre?.setOnClickListener{
+            setDataFromTexBox()
             if (user?.text?.isNotEmpty()!! && password?.text?.isNotEmpty()!!){
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(user!!.text.toString(),
                     password!!.text.toString()).addOnCompleteListener {
