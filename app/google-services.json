@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "493659401390",
+    "project_id": "exco-app",
+    "storage_bucket": "exco-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493659401390:android:be8954122bd4a58b6f113f",
+        "android_client_info": {
+          "package_name": "com.ArcofeJoexor.excoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493659401390-aufsgmm95c0secfd1tm80i2rfpvlm73i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ArcofeJoexor.excoapp",
+            "certificate_hash": "3eed7f0f0b946dfe06a2eb7945df7a4c7feb0e2d"
+          }
+        },
+        {
+          "client_id": "493659401390-ngq8o60a4r2o6r45vmk0dj1ihgk7r7sk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLm37x9xNj8dvyCc1dif13-uZApnU95ww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493659401390-ngq8o60a4r2o6r45vmk0dj1ihgk7r7sk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
