@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/ajustesInici"
         android:layout_width="82dp"
         android:layout_height="73dp"
         android:scaleType="fitStart"
