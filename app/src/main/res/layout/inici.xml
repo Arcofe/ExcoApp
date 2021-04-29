@@ -74,7 +74,7 @@
         app:srcCompat="@drawable/logo_small_icon_only_inverted" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/jugar"
         android:layout_width="199dp"
         android:layout_height="65dp"
         android:textStyle="bold"
@@ -88,7 +88,7 @@
         app:layout_constraintVertical_bias="0.581" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/ranking"
         android:layout_width="199dp"
         android:layout_height="65dp"
         android:textStyle="bold"

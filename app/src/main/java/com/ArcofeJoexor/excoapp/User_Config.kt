@@ -20,11 +20,6 @@ class User_Config : AppCompatActivity(), View.OnClickListener {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }
-            R.id.Modifidor -> {
-                val intent = Intent(this, Modifier::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(intent)
-            }
         }
     }
 }

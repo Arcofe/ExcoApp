@@ -134,7 +134,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setup() {
-        title = "Autenticació"
         /**
          * Part on mirara si existeix l'usuari per inicar la sessió
          */

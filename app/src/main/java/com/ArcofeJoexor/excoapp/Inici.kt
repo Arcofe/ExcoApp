@@ -17,13 +17,19 @@ class Inici: AppCompatActivity(), View.OnClickListener {
     }
 
     private var btnAjustes: ImageButton? = null
+    private var btnJugar: Button? = null
+    private var btnRanking: Button? = null
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.inici)
 
             btnAjustes = findViewById<ImageButton>(R.id.ajustesInici)
+            btnJugar = findViewById<Button>(R.id.jugar)
+            btnRanking = findViewById<Button>(R.id.ranking)
             btnAjustes!!.setOnClickListener(this)
+            btnJugar!!.setOnClickListener(this)
+            btnRanking!!.setOnClickListener(this)
 
             /**
              * Part on canviem dinamicament un TextView
@@ -38,6 +44,18 @@ class Inici: AppCompatActivity(), View.OnClickListener {
         when(v?.id){
             R.id.ajustesInici -> {
                 val intent = Intent(this, Ajustes::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+            }
+
+            R.id.jugar -> {
+                val intent = Intent(this, TriarTema::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+            }
+
+            R.id.ranking -> {
+                val intent = Intent(this, Ranking::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }

@@ -14,6 +14,7 @@ class Ajustes: AppCompatActivity(), View.OnClickListener {
 
     private var btnAtras: ImageButton? = null
     private var btnLogOut: Button? = null
+    private var btnConfigUser: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +22,10 @@ class Ajustes: AppCompatActivity(), View.OnClickListener {
 
         btnAtras = findViewById<ImageButton>(R.id.atras)
         btnLogOut = findViewById<Button>(R.id.Logout)
+        btnConfigUser = findViewById<Button>(R.id.ConfigUser)
         btnAtras!!.setOnClickListener(this)
         btnLogOut!!.setOnClickListener(this)
+        btnConfigUser!!.setOnClickListener(this)
 
     }
 
@@ -31,6 +34,12 @@ class Ajustes: AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.atras -> {
                 val intent = Intent(this, Inici::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                startActivity(intent)
+            }
+
+            R.id.ConfigUser -> {
+                val intent = Intent(this, User_Config::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }
