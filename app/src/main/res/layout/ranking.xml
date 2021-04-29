@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/ajustesInici"
+        android:id="@+id/ajustesRanking"
         android:layout_width="82dp"
         android:layout_height="73dp"
         android:scaleType="fitStart"

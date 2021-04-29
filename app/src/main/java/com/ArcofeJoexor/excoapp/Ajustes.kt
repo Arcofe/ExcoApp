@@ -33,9 +33,7 @@ class Ajustes: AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.atras -> {
-                val intent = Intent(this, Inici::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(intent)
+                this.finish()
             }
 
             R.id.ConfigUser -> {
