@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class TriarTema: AppCompatActivity(), View.OnClickListener {
 
@@ -20,6 +23,14 @@ class TriarTema: AppCompatActivity(), View.OnClickListener {
         btnAjustes = findViewById<ImageButton>(R.id.ajustesTema)
         btnAtras!!.setOnClickListener(this)
         btnAjustes!!.setOnClickListener(this)
+
+        /**
+         * Part on canviem dinamicament un TextView
+         */
+        var currentuser = Firebase.auth.currentUser
+        var usuario = findViewById<TextView>(R.id.usuario)
+        val user = currentuser?.email?.split('@')
+        usuario.text = user?.get(0)
 
     }
 
