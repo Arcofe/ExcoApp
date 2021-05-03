@@ -22,6 +22,7 @@
         <activity android:name=".Registre"/>
         <activity android:name=".Ranking"/>
         <activity android:name=".User_Config"/>
+        <activity android:name=".Quiz"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
