@@ -49,7 +49,7 @@ class Inici: AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.jugar -> {
-                val intent = Intent(this, TriarTema::class.java)
+                val intent = Intent(this, Quiz::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
             }
