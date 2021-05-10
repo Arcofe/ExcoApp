@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
          * Variables para poder hacer login con google.
          */
         mAuth = FirebaseAuth.getInstance()
-
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -93,12 +92,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     val account = task.getResult(ApiException::class.java)!!
                     Log.d("SignInActivity", "firebaseAuthWithGoogle:" + account.id)
                     firebaseAuthWithGoogle(account.idToken!!)
+                    println("Login Google 1")
                 } catch (e: ApiException) {
                     // Google Sign In failed, update UI appropriately
                     Log.w("SignInActivity", "Google sign in failed", e)
                     // ...
                 }
             }else{
+                println("Login Google 2")
                 Log.w("SignInActivity", exception.toString())
             }
 
@@ -115,11 +116,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        println("Login Google Correcte")
                         // Sign in success, update UI with the signed-in user's information
                         Log.d("SignInActivity", "signInWithCredential:success")
                         val intent = Intent(this, Inici::class.java)
                         startActivity(intent)
                     } else {
+                        println("Login Google InCorrecte")
                         // If sign in fails, display a message to the user.
                         Log.w("SignInActivity", "signInWithCredential:failure", task.exception)
                     }
@@ -139,13 +142,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
          */
         btnLogIn?.setOnClickListener{
             //
+            println("Login Email 1")
             setDataFromTexBox();
             if (user?.text?.isNotEmpty()!!  && password?.text?.isNotEmpty()!!){
+                println("Login Email 2")
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(user?.text.toString(),
                         password?.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
+                        println("Login Email 3")
                         showHome(it.result?.user?.email ?: "", Inici.ProviderType.BASIC)
                     }else{
+                        println("Login Email 4")
                         showAlert()
                     }
 
